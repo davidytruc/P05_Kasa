@@ -11,8 +11,8 @@ function App() {
       <BrowserRouter>
       <Navigation />
       <Routes>
-        <Route path="accueil" element={<Accueil />} />
-        <Route path="apropos" element={<Apropos />} />
+        <Route path="/" element={<Accueil />} />
+        <Route path="/apropos" element={<Apropos />} />
       </Routes>
       <Footer />
       </BrowserRouter>
