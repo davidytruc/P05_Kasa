@@ -1,13 +1,16 @@
+/* eslint-disable */
+
 import { Link } from 'react-router-dom'
 import logo_desktop from '../assets/images/logo_desktop.png'
+import '../styles.scss'
 
-export default function Navigation() {
+export default function Navigation({ accueilunderline, aproposunderline }) {
     return (
-        <div className='header'>
+        <div className='navbar'>
           <img alt="Logo Kasa" src={logo_desktop} />
-          <nav>
-            <Link to="/">Accueil</Link>
-            <Link to="/apropos">A propos</Link>
+          <nav className='navbar'>
+            <Link to="/" className={`navbar__link ${accueilunderline}`}>Accueil</Link>
+            <Link to="/apropos" className={`navbar__link ${aproposunderline}`}>A propos</Link>
           </nav>
         </div>
       );
