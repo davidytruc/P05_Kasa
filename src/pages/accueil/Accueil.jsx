@@ -6,7 +6,7 @@ export default function Accueil() {
     return (
         <div className="conteneur">
             <Navigation accueilunderline="navbar__link--underline" />
-            <Banner textbanner="Chez vous, partout et ailleurs" />
+            <Banner imageUrl={banner_accueil} textbanner="Chez vous, partout et ailleurs" />
             <h1>Ma page accueil</h1>
         </div>
     )
