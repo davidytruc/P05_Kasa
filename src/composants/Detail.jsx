@@ -11,37 +11,51 @@ export default function Detail() {
 
   return (
     <div className="detail">
-      <div className="detailcarrousel">
-        {logement.pictures.map ( picture =>
+
+      <div className="carrousel">
+        {/* {logement.pictures.map ( picture =>
           <ul key={picture} className="detailpictures">
             <li>{picture}</li>
           </ul>
         )
-        }
+        } */}
+        <img alt={logement.title} src={logement.pictures[0]} className="detailpictures" />
       </div>
+      
       <div className="titletags">
-        <h1>{logement.title}</h1>
-        <p>{logement.location}</p>
-        {logement.tags.map ( tag =>
-          <ul key={tag} className="detailtags">
-            <li>{tag}</li>
+        <div>
+          <h1>{logement.title}</h1>
+          <p>{logement.location}</p>
+          <ul className="detailtags">
+            {logement.tags.map ( tag =>
+                <li key={tag}>{tag}</li>
+              )
+            }
           </ul>
-        )
-        }
+        </div>
+        <div className="hosts">
+          <div className="detailhosts">
+            <p>{logement.host.name}</p>
+            <img alt={logement.host.name} src={logement.host.picture} />
+          </div>
+          <p>{logement.rating}</p>
+        </div>
       </div>
-      <div className="hosts">
-        <p>{logement.host.name}</p>
-        <img alt={logement.host.name} src={logement.host.picture} />
-        <p>{logement.rating}</p>
-      </div>
+      
       <div className="description">
-        <p>{logement.description}</p>
-        {logement.equipments.map ( equipement =>
-          <ul key={equipement} className="detailequipements">
-            <li>{equipement}</li>
+        <div>
+          <p>Description</p>
+          <p>{logement.description}</p>
+        </div>
+        <div>
+          <p>Equipements</p>
+          <ul  className="detailequipements">
+            {logement.equipments.map ( equipement =>
+                <li key={equipement}>{equipement}</li>
+              )
+            }
           </ul>
-        )
-        }
+        </div>
       </div>
     </div>
   );
