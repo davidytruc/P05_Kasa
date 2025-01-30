@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import logements from "./../datas/logements.json"
 
 export default function Card() {
@@ -6,10 +7,10 @@ export default function Card() {
             <ul className="ulcard">
                 {logements.map((logement) => (
                     <li key={logement.id} className="ulcard__li">
-                        <a>
+                        <Link to={`/logement/${logement.id}`}>
                             <img alt={logement.title} src={logement.cover} />
                             <p>{logement.title}</p>
-                        </a>
+                        </Link>
                     </li>
                 )
                 )}
