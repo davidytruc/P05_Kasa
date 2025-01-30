@@ -11,9 +11,38 @@ export default function Detail() {
 
   return (
     <div className="detail">
-      <h1>{logement.title}</h1>
-      <img src={logement.cover} alt={logement.title} />
-      <p>{logement.description}</p>
+      <div className="detailcarrousel">
+        {logement.pictures.map ( picture =>
+          <ul key={picture} className="detailpictures">
+            <li>{picture}</li>
+          </ul>
+        )
+        }
+      </div>
+      <div className="titletags">
+        <h1>{logement.title}</h1>
+        <p>{logement.location}</p>
+        {logement.tags.map ( tag =>
+          <ul key={tag} className="detailtags">
+            <li>{tag}</li>
+          </ul>
+        )
+        }
+      </div>
+      <div className="hosts">
+        <p>{logement.host.name}</p>
+        <img alt={logement.host.name} src={logement.host.picture} />
+        <p>{logement.rating}</p>
+      </div>
+      <div className="description">
+        <p>{logement.description}</p>
+        {logement.equipments.map ( equipement =>
+          <ul key={equipement} className="detailequipements">
+            <li>{equipement}</li>
+          </ul>
+        )
+        }
+      </div>
     </div>
   );
 }
