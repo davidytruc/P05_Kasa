@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 import { Link, useLocation } from 'react-router-dom'
 import logo_desktop from '../assets/images/logo_desktop.png'
 import '../styles.scss'
