@@ -109,6 +109,7 @@ ul {
     display: flex;
     justify-content: space-between;
     font-family: 'Montserrat', sans-serif;
+    margin-bottom: 18px;
     h1 {
         margin-bottom: 8px;
         padding-top: 25px;
@@ -121,18 +122,60 @@ ul {
         margin-bottom: 8px;
         font-size: 18px;
     }
+    .detailtags {
+        display: flex;
+        gap: 10px;
+        padding: 0px;
+        li {
+            padding: 3px 5px;
+            border-radius: 5px;
+            background-color: $orange;
+            color: white;
+            font-size: 14px;
+        }
+        
+    }
 }
 
-.detailtags {
+.hosts {
     display: flex;
-    gap: 15px;
-    padding: 0px;
-    li {
-        padding: 3px 5px;
-        border-radius: 5px;
-        background-color: $orange;
-        color: white;
-        font-size: 14px;
+    flex-direction: column;
+    .detailhosts {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding-top: 10px;
+        margin-bottom: 10px;
+        img {
+            display: block;
+            border-radius: 100%;
+            width: 64px;
+        }
     }
-    
+    p {
+        color: $orange;
+        font-size: 18px;
+        font-weight: 500;
+    }
 }
+
+.description {
+    display: flex;
+    gap: 10px;
+    .descriptiondetail {
+        width: 50%;
+        p {
+            display: flex;
+            align-items: center;
+            height: 42px;
+            border-radius: 10px;
+            text-align: left;
+            padding-left: 10px;
+            color: white;
+            font-size: 24px;
+            background-color: $orange;
+        }
+    }
+}
+
+
