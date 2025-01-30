@@ -11,15 +11,19 @@ $background-grey: #F6F6F6;
 }
 
 .navbar {
-    max-width: 1240px;
     height: 68px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    &__link {
+    .navbar__list {
+        list-style-type: none;
+        display: flex;
+    }
+    .navbar__link {
         margin : 10px;
+        margin-bottom: 0;
         color: black;
         font-size: x-large;
         text-decoration: none;
@@ -42,7 +46,7 @@ $background-grey: #F6F6F6;
         justify-content: center;
         align-items: center;
         height: 100%;
-        background-color: rgb(0, 0, 0, 0.5);
+        background-color: rgb(0, 0, 0, 0.6);
         color: white;
         font-size: 380%;
     }
