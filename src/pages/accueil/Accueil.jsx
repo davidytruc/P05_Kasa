@@ -6,9 +6,7 @@ export default function Accueil() {
     return (
         <div className="conteneur">
             <Banner imageUrl={banner_accueil} textbanner="Chez vous, partout et ailleurs" />
-            <div className="liste_logements">
-                <Card />
-            </div>
+            <Card />
         </div>
     )
 }

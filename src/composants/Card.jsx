@@ -2,7 +2,7 @@ import logements from "./../datas/logements.json"
 
 export default function Card() {
     return (
-        <div className="cardlist">
+        <div className="liste_logements">
             <ul className="ulcard">
                 {logements.map((logement) => (
                     <li key={logement.id} className="ulcard__li">
