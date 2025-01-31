@@ -39,7 +39,13 @@ export default function Detail() {
             <p>{logement.host.name}</p>
             <img alt={logement.host.name} src={logement.host.picture} />
           </div>
-          <Rating rating={logement.rating} />
+          <div className="rating">
+            <Rating index={0} rating={logement.rating} />
+            <Rating index={1} rating={logement.rating} />
+            <Rating index={2} rating={logement.rating} />
+            <Rating index={3} rating={logement.rating} />
+            <Rating index={4} rating={logement.rating} />
+          </div>
         </div>
       </div>
       

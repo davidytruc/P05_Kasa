@@ -1,21 +1,15 @@
 /* eslint-disable react/prop-types */
 
-import starActive from "../assets/images/star-active.png";
-import starInactive from "../assets/images/star-inactive.png";
+import star_active from "../assets/images/star_active.png";
+import star_inactive from "../assets/images/star_inactive.png";
 
-export default function Rating({ rating }) {
-  const totalStars = 5
+export default function Rating({ index, rating }) {
 
   return (
-    <div className="rating">
-      {[...Array(totalStars)].map((_, index) => (
         <img
-          key={index}
-          src={index < rating ? starActive : starInactive}
+          src={index < rating ? star_active : star_inactive}
           alt={index < rating ? "Étoile active" : "Étoile inactive"}
           className="star"
         />
-      ))}
-    </div>
   );
 }
