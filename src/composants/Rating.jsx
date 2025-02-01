@@ -11,5 +11,5 @@ export default function Rating({ index, rating }) {
           alt={index < rating ? "Étoile active" : "Étoile inactive"}
           className="star"
         />
-  );
+  )
 }

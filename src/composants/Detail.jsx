@@ -1,6 +1,7 @@
-import { useParams } from "react-router-dom";
-import logements from "../datas/logements.json";
-import Rating from "./Rating.jsx";
+import { useParams } from "react-router-dom"
+import logements from "../datas/logements.json"
+import Rating from "./Rating.jsx"
+import arrow from '../assets/images/arrow.png'
 
 export default function Detail() {
   const { id } = useParams() // Récupération de l'ID depuis l'URL
@@ -51,12 +52,18 @@ export default function Detail() {
       
       <div className="description">
         <div className="descriptiondetail">
-          <p>Description</p>
-          <div>{logement.description}</div>
+          <div className="entete">
+            <p>Description</p>
+            <img alt="Description détaillée du logement" src={arrow} />
+          </div>
+          <div className="rolling">{logement.description}</div>
         </div>
         <div className="descriptiondetail">
-          <p>Equipements</p>
-          <ul  className="detailequipements">
+          <div className="entete">
+            <p>Equipements</p>
+            <img alt="Equipements du logement" src={arrow} />
+          </div>
+          <ul  className="rolling">
             {logement.equipments.map ( equipement =>
                 <li key={equipement}>{equipement}</li>
               )

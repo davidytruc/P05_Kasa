@@ -162,20 +162,39 @@ ul {
 .description {
     display: flex;
     gap: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
     .descriptiondetail {
         width: 50%;
-        p {
+        display: flex;
+        flex-direction: column;
+        .entete {
             display: flex;
             align-items: center;
+            justify-content: space-between;
             height: 42px;
             border-radius: 10px;
-            text-align: left;
-            padding-left: 10px;
+            padding: 0 10px;
             color: white;
-            font-size: 24px;
+            font-size: 18px;
             background-color: $orange;
         }
+        .rolling {
+            height: 100%;
+            text-align: left;
+            padding: 20px 15px;
+            border-radius: 10px;
+            background-color: $background-grey;
+            font-size: 16px;
+            display: none;
+        }
     }
+}
+
+
+footer {
+    margin-top: 20px;
 }
 
 
