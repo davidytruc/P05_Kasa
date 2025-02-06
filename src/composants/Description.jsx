@@ -8,7 +8,7 @@ export default function Description({bandeau, log_desc}) {
 
     return (
         <div className="descriptiondetail">
-            <Entete alt="Description" bandeau={bandeau} setIsOpen={setIsOpen} isOpen={isOpen} />
+            <Entete entete="entete" alt="Description" bandeau={bandeau} setIsOpen={setIsOpen} isOpen={isOpen} />
             {isOpen && <div className="rolling">{log_desc}</div>}
         </div>
     )
