@@ -1,11 +1,9 @@
 import { useParams, Navigate } from "react-router-dom"
-import { useState } from "react";
 import logements from "../datas/logements.json"
 import Rating from "./Rating.jsx"
 import Description from "./Description.jsx"
 import Equipement from "./Equipements"
-import arrow_back from "../assets/images/arrow_back.png"
-import arrow_forward from "../assets/images/arrow_forward.png"
+import Carrousel from "./Carrousel.jsx";
 
 export default function Detail() {
   const { id } = useParams() // Récupération de l'ID depuis l'URL
@@ -15,25 +13,13 @@ export default function Detail() {
     return <Navigate to="/404" replace />
   }
 
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const [Index, setIndex] = useState(0)
-  const logNbrPic = logement.pictures.length
-  const nextImage = () => {setIndex((prevIndex) => (prevIndex + 1) % logNbrPic)}
-  const prevImage = () => {setIndex((prevIndex) => (prevIndex - 1 + logNbrPic) % logNbrPic)}
-
   return (
     <div className="detail">
 
-      <div className="carrousel">
-        <img alt={logement.title} src={logement.pictures[Index]} className="detailpictures" />
-        {logNbrPic > 1 &&
-        <>
-          <img alt="Image précédente" src={arrow_back} className="arrow back" onClick={prevImage}/>
-          <img alt="Image précédente" src={arrow_forward} className="arrow forward" onClick={nextImage}/>
-          <div className='nbrPicture'>{`${Index + 1} / ${logNbrPic}`}</div>
-        </>
-        }
-      </div>
+      <Carrousel
+        nbrPic={logement.pictures}
+        title={logement.title}
+      />
       
       <div className="titletags">
         <div>
@@ -71,6 +57,7 @@ export default function Detail() {
           log_equi={logement.equipments}
         />
       </div>
+      
     </div>
   );
 }
