@@ -12,5 +12,4 @@ export default function Description({bandeau, log_desc}) {
             {isOpen && <div className="rolling">{log_desc}</div>}
         </div>
     )
-
 }

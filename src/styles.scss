@@ -102,10 +102,30 @@ ul {
 
 .carrousel {
     height: 415px;
+    position: relative;
     img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+    .nbrPicture {
+        position: absolute;
+        top: 93%;
+        left: 50%;
+        color: white;
+    }
+    .arrow {
+        position: absolute;
+        top: 45%;
+        width: 36px;
+        height: 60px;
+        cursor: pointer;
+    }
+    .back {
+        left: 2%;
+    }
+    .forward {
+        right: 2%;
     }
 }
 
@@ -245,6 +265,22 @@ ul {
     to {
       opacity: 1;
       max-height: 500px;
+    }
+}
+
+.page404 {
+    font-family: $main-font;
+    h1 {
+        color: $orange;
+        font-size: 220px;
+    }
+    p {
+        color: $orange;
+        font-size: 36px;
+        margin-bottom: 35px;
+    }
+    .retour {
+        color: black;
     }
 }
 

@@ -19,5 +19,4 @@ export default function Equipement({bandeau, log_equi}) {
           }
         </div>
     )
-
 }
