@@ -8,7 +8,7 @@ export default function Navigation() {
     return (
       <div className='conteneur'>
         <div className='navbar'>
-          <img alt="Logo Kasa" src={logo_desktop} />
+          <img alt="Logo Kasa" src={logo_desktop}/>
           <nav>
             <ul className='navbar__list'>
               <li><Link to="/" className={isActive('/') ? 'navbar__link navbar__link--underline' : 'navbar__link'}>Accueil</Link></li>
