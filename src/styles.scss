@@ -15,18 +15,18 @@ ul {
 }
 
 .conteneur {
-    width: 1280px;
+    width: 100%;
+    max-width: 1280px;
     margin: auto;
 }
 
 .navbar {
-    width: 1280px;;
+    width: 100%;
     margin: auto;
     height: 68px;
     margin-top: 30px;
     margin-bottom: 30px;
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     .navbar__list {
@@ -104,7 +104,8 @@ ul {
 /*Mon composant Detail*/
 
 .detail {
-    width: 1280px;
+    width: 100%;
+    max-width: 1280px;
     margin: auto;
     margin-bottom: 35px;
 }
