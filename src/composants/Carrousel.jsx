@@ -10,8 +10,6 @@ export default function Carrousel({ nbrPic, title }) {
   const prevImage = () => {setIndex((prevIndex) => (prevIndex - 1 + logNbrPic) % logNbrPic)}
 
   return (
-    <div className="detail">
-
       <div className="carrousel">
         <img alt={title} src={nbrPic[Index]} className="detailpictures" />
         {logNbrPic > 1 &&
@@ -22,6 +20,5 @@ export default function Carrousel({ nbrPic, title }) {
         </>
         }
       </div>
-    </div>
     )
 }

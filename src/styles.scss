@@ -15,12 +15,15 @@ ul {
 }
 
 .conteneur {
-    max-width: 1280px;
+    width: 1280px;
+    margin: auto;
 }
 
 .navbar {
-    max-width: 1280px;;
+    width: 1280px;;
+    margin: auto;
     height: 68px;
+    margin-top: 30px;
     margin-bottom: 30px;
     display: flex;
     flex-direction: row;
@@ -100,6 +103,11 @@ ul {
 
 /*Mon composant Detail*/
 
+.detail {
+    width: 1280px;
+    margin: auto;
+    margin-bottom: 35px;
+}
 .carrousel {
     height: 415px;
     position: relative;
@@ -270,6 +278,7 @@ ul {
 
 .page404 {
     font-family: $main-font;
+    margin-bottom: 35px;
     h1 {
         color: $orange;
         font-size: 220px;
