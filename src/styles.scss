@@ -329,6 +329,17 @@ ul {
                 padding: 10px 8px;
             }
         }
+        .hidden {
+            height: 0;
+            text-align: left;
+            font-size: 16px;
+            color: #333;
+            animation: fadeOut 0.4s ease-in-out forwards;
+            @media (max-width: 768px) {
+                font-size: 12px;
+                padding: 10px 8px;
+            }
+        }
     }
 }
 
@@ -380,16 +391,39 @@ ul {
             padding: 0 4px 10px 4px;
         }
     }
+    .hidden {
+        height: 0;
+        text-align: left;
+        font-size: 18px;
+        color: #333;
+        animation: fadeOut 0.4s ease-in-out forwards;
+        @media (max-width: 768px) {
+            font-size: 12px;
+            padding: 0 4px 10px 4px;
+        }
+    }
+
 }
 
 @keyframes fadeIn {
     from {
-      opacity: 0.2;
-      max-height: 0;
+        opacity: 0.2;
+        max-height: 0;
     }
     to {
-      opacity: 1;
-      max-height: 500px;
+        opacity: 1;
+        max-height: 500px;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 0.2;
+        max-height: 500px;
+    }
+    to {
+        opacity: 0;
+        max-height: 0;
     }
 }
 

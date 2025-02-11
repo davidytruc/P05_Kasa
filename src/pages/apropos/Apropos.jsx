@@ -8,14 +8,14 @@ export default function Apropos() {
     const [isOpen2, setIsOpen2] = useState(false)
     const [isOpen3, setIsOpen3] = useState(false)
     const [isOpen4, setIsOpen4] = useState(false)
+    const fiabilite = "Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes."
 
     return (
         <div className="conteneur">
             <Banner imageUrl={banner_apropos} />
             <div className="apropos">
                 <Entete entete="listeapropos" alt="Fiabilité" bandeau="Fiabilité" setIsOpen={setIsOpen1} isOpen={isOpen1} />
-                {isOpen1 && <div className="rolling">Les annonces postées sur Kasa garantissent une fiabilité totale.
-                    Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.</div>}
+                {isOpen1 ? <div className="rolling">{fiabilite}</div> : <div className="hidden">{fiabilite}</div>}
                 <Entete entete="listeapropos" alt="Respect" bandeau="Respect" setIsOpen={setIsOpen2} isOpen={isOpen2} />
                 {isOpen2 && <div className="rolling">La bienveillance fait partie des valeurs fondatrices de Kasa.
                     Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.</div>}

@@ -9,7 +9,7 @@ export default function Description({bandeau, log_desc}) {
     return (
         <div className="descriptiondetail">
             <Entete entete="entete" alt="Description" bandeau={bandeau} setIsOpen={setIsOpen} isOpen={isOpen} />
-            {isOpen && <div className="rolling">{log_desc}</div>}
+            {isOpen ? <div className="rolling">{log_desc}</div> : <div className="hidden">{log_desc}</div>}
         </div>
     )
 }

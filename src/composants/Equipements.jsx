@@ -9,8 +9,15 @@ export default function Equipement({bandeau, log_equi}) {
     return (
         <div className="descriptiondetail">
           <Entete entete="entete" alt="Equipements" bandeau={bandeau} setIsOpen={setIsOpen} isOpen={isOpen} />
-          {isOpen &&
+          {isOpen ?
             <ul  className="rolling">
+              {log_equi.map ( equipement =>
+                <li key={equipement}>{equipement}</li>
+              )
+              }
+            </ul>
+            :
+            <ul  className="hidden">
               {log_equi.map ( equipement =>
                 <li key={equipement}>{equipement}</li>
               )
