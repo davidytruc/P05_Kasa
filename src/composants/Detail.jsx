@@ -1,9 +1,9 @@
 import { useParams, Navigate } from "react-router-dom"
 import logements from "../datas/logements.json"
-import Rating from "./Rating.jsx"
+import Stars from "./Stars.jsx"
 import Description from "./Description.jsx"
 import Equipement from "./Equipements"
-import Carrousel from "./Carrousel.jsx";
+import Carrousel from "./Gallery.jsx";
 
 export default function Detail() {
   const { id } = useParams() // Récupération de l'ID depuis l'URL
@@ -38,11 +38,11 @@ export default function Detail() {
             <img alt={logement.host.name} src={logement.host.picture} />
           </div>
           <div className="rating">
-            <Rating index={0} rating={logement.rating} />
-            <Rating index={1} rating={logement.rating} />
-            <Rating index={2} rating={logement.rating} />
-            <Rating index={3} rating={logement.rating} />
-            <Rating index={4} rating={logement.rating} />
+            <Stars index={0} rating={logement.rating} />
+            <Stars index={1} rating={logement.rating} />
+            <Stars index={2} rating={logement.rating} />
+            <Stars index={3} rating={logement.rating} />
+            <Stars index={4} rating={logement.rating} />
           </div>
         </div>
       </div>

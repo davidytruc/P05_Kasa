@@ -3,7 +3,7 @@
 import star_active from "../assets/images/star_active.png";
 import star_inactive from "../assets/images/star_inactive.png";
 
-export default function Rating({ index, rating }) {
+export default function Stars({ index, rating }) {
 
   return (
         <img

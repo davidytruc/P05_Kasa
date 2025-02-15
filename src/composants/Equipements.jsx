@@ -1,14 +1,14 @@
 /* eslint-disable react/prop-types */
 
 import { useState } from "react"
-import Entete from "./Entete"
+import Collapse from "./Collapse"
 
 export default function Equipement({bandeau, log_equi}) {
     const [isOpen, setIsOpen] = useState(false)
 
     return (
         <div className="descriptiondetail">
-          <Entete entete="entete" alt="Equipements" bandeau={bandeau} setIsOpen={setIsOpen} isOpen={isOpen} />
+          <Collapse entete="entete" alt="Equipements" bandeau={bandeau} setIsOpen={setIsOpen} isOpen={isOpen} />
           {isOpen ?
             <ul  className="rolling">
               {log_equi.map ( equipement =>

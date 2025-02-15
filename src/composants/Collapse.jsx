@@ -2,7 +2,7 @@
 
 import arrow from '../assets/images/arrow.png'
 
-export default function Entete ({ entete, bandeau, alt, setIsOpen, isOpen }) {
+export default function Collapse ({ entete, bandeau, alt, setIsOpen, isOpen }) {
 
     return (
         <div className={entete}>

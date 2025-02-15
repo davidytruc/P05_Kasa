@@ -297,13 +297,14 @@ ul {
             justify-content: space-between;
             max-height: 42px;
             border-radius: 10px;
-            padding: 0 10px;
+            padding: 10px;
             color: white;
             font-size: 18px;
             background-color: $orange;
             @media (max-width: 768px) {
                 font-size: 14px;
                 border-radius: 5px;
+                padding: 5px;
             }
             .arrow {
                 transition: transform 0.3s ease;
@@ -318,7 +319,6 @@ ul {
             }
         }
         .rolling {
-            height: 100%;
             text-align: left;
             padding: 20px 15px;
             font-size: 16px;
@@ -330,11 +330,11 @@ ul {
             }
         }
         .hidden {
-            height: 0;
+            display: none;
             text-align: left;
+            padding: 20px 15px;
             font-size: 16px;
-            color: #333;
-            animation: fadeOut 0.4s ease-in-out forwards;
+            animation: fadeOut 0.3s ease-in-out;
             @media (max-width: 768px) {
                 font-size: 12px;
                 padding: 10px 8px;
@@ -357,7 +357,7 @@ ul {
         justify-content: space-between;
         max-height: 42px;
         border-radius: 10px;
-        padding: 0 10px;
+        padding: 10px 10px;
         color: white;
         font-size: 24px;
         font-family: $main-font;
@@ -366,6 +366,7 @@ ul {
             font-size: 14px;
             border-radius: 5px;
             margin-bottom: 10px;
+            padding: 5px 5px;
         }
         .arrow {
             transition: transform 0.3s ease;
@@ -380,7 +381,6 @@ ul {
         }
     }
     .rolling {
-        height: 100%;
         text-align: left;
         padding-bottom: 25px;
         font-size: 18px;
@@ -392,11 +392,9 @@ ul {
         }
     }
     .hidden {
-        height: 0;
+        display: none;
         text-align: left;
-        font-size: 18px;
-        color: #333;
-        animation: fadeOut 0.4s ease-in-out forwards;
+        animation: fadeOut 0.3s ease-in-out forwards;
         @media (max-width: 768px) {
             font-size: 12px;
             padding: 0 4px 10px 4px;
@@ -418,11 +416,11 @@ ul {
 
 @keyframes fadeOut {
     from {
-        opacity: 0.2;
+        display: block;
         max-height: 500px;
     }
     to {
-        opacity: 0;
+        display: none;
         max-height: 0;
     }
 }
