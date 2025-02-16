@@ -1,11 +1,11 @@
 import { useParams, Navigate } from "react-router-dom"
-import logements from "../datas/logements.json"
-import Stars from "./Stars.jsx"
-import Description from "./Description.jsx"
-import Equipement from "./Equipements"
-import Carrousel from "./Gallery.jsx";
+import logements from "../../datas/logements.json"
+import Stars from "../../composants/Stars.jsx"
+import Description from "../../composants/Description.jsx"
+import Equipement from "../../composants/Equipements.jsx"
+import Carrousel from "../../composants/Gallery.jsx";
 
-export default function Detail() {
+export default function Logementid() {
   const { id } = useParams() // Récupération de l'ID depuis l'URL
   const logement = logements.find((item) => item.id.toString() === id)
 

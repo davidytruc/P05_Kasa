@@ -8,7 +8,9 @@ export default function Description({bandeau, log_desc}) {
 
     return (
         <div className="descriptiondetail">
-            <Collapse entete="entete" alt="Description" bandeau={bandeau} setIsOpen={setIsOpen} isOpen={isOpen} />
+            <div className="entete">
+                <Collapse alt="Description" bandeau={bandeau} setIsOpen={setIsOpen} isOpen={isOpen} />
+            </div>
             {isOpen ? <div className="rolling">{log_desc}</div> : <div className="hidden">{log_desc}</div>}
         </div>
     )

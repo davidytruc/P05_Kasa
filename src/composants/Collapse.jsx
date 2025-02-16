@@ -2,10 +2,10 @@
 
 import arrow from '../assets/images/arrow.png'
 
-export default function Collapse ({ entete, bandeau, alt, setIsOpen, isOpen }) {
+export default function Collapse ({ bandeau, alt, setIsOpen, isOpen }) {
 
     return (
-        <div className={entete}>
+        <>
             <p>{bandeau}</p>
             <img
                 alt={alt}
@@ -13,7 +13,7 @@ export default function Collapse ({ entete, bandeau, alt, setIsOpen, isOpen }) {
                 className={`arrow ${isOpen ? "rotate" : ""}`}
                 onClick={() => setIsOpen(!isOpen)}
             />
-        </div>
+        </>
     )
 }
 

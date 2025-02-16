@@ -291,116 +291,70 @@ ul {
         @media (max-width: 768px) {
             width: 100%;
         }
-        .entete {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            max-height: 42px;
-            border-radius: 10px;
-            padding: 10px;
-            color: white;
-            font-size: 18px;
-            background-color: $orange;
-            @media (max-width: 768px) {
-                font-size: 14px;
-                border-radius: 5px;
-                padding: 5px;
-            }
-            .arrow {
-                transition: transform 0.3s ease;
-                cursor: pointer;
-                @media (max-width: 768px) {
-                    height: 30px;
-                }
-            }
-            .rotate {
-                transform: rotate(-180deg);
-                cursor: pointer;
-            }
-        }
-        .rolling {
-            text-align: left;
-            padding: 20px 15px;
-            font-size: 16px;
-            color: #333;
-            animation: fadeIn 0.9s ease-in-out;
-            @media (max-width: 768px) {
-                font-size: 12px;
-                padding: 10px 8px;
-            }
-        }
-        .hidden {
-            display: none;
-            text-align: left;
-            padding: 20px 15px;
-            font-size: 16px;
-            animation: fadeOut 0.3s ease-in-out;
-            @media (max-width: 768px) {
-                font-size: 12px;
-                padding: 10px 8px;
-            }
-        }
     }
 }
 
 .apropos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     width: 80%;
     margin: auto;
+    margin-bottom: 30px;
     font-family: $main-font;
     @media (max-width: 768px) {
         width: 100%;
     }
-    .listeapropos {
-        margin-bottom: 25px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        max-height: 42px;
-        border-radius: 10px;
-        padding: 10px 10px;
-        color: white;
-        font-size: 24px;
-        font-family: $main-font;
-        background-color: $orange;
-        @media (max-width: 768px) {
-            font-size: 14px;
-            border-radius: 5px;
-            margin-bottom: 10px;
-            padding: 5px 5px;
-        }
-        .arrow {
-            transition: transform 0.3s ease;
-            cursor: pointer;
-            @media (max-width: 768px) {
-                height: 30px;
-            }
-        }
-        .rotate {
-            transform: rotate(-180deg);
-            cursor: pointer;
-        }
-    }
-    .rolling {
-        text-align: left;
-        padding-bottom: 25px;
-        font-size: 18px;
-        color: #333;
-        animation: fadeIn 0.9s ease-in-out;
-        @media (max-width: 768px) {
-            font-size: 12px;
-            padding: 0 4px 10px 4px;
-        }
-    }
-    .hidden {
-        display: none;
-        text-align: left;
-        animation: fadeOut 0.3s ease-in-out forwards;
-        @media (max-width: 768px) {
-            font-size: 12px;
-            padding: 0 4px 10px 4px;
-        }
-    }
+}
 
+.entete {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-height: 42px;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    font-size: 18px;
+    background-color: $orange;
+    @media (max-width: 768px) {
+        font-size: 14px;
+        border-radius: 5px;
+        padding: 5px;
+    }
+    .arrow {
+        transition: transform 0.3s ease;
+        cursor: pointer;
+        @media (max-width: 768px) {
+            height: 30px;
+        }
+    }
+    .rotate {
+        transform: rotate(-180deg);
+        cursor: pointer;
+    }
+}
+.rolling {
+    text-align: left;
+    padding: 20px 15px;
+    font-size: 16px;
+    color: #333;
+    animation: fadeIn 0.9s ease-in-out;
+    @media (max-width: 768px) {
+        font-size: 12px;
+        padding: 10px 8px;
+    }
+}
+.hidden {
+    display: none;
+    text-align: left;
+    padding: 20px 15px;
+    font-size: 16px;
+    animation: fadeOut 0.3s ease-in-out;
+    @media (max-width: 768px) {
+        font-size: 12px;
+        padding: 10px 8px;
+    }
 }
 
 @keyframes fadeIn {

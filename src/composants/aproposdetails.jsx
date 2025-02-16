@@ -8,7 +8,9 @@ export default function AproposDetails ({ alt, bandeau, theme }) {
 
     return (
         <>
-            <Entete entete="listeapropos" alt={alt} bandeau={bandeau} setIsOpen={setIsOpen} isOpen={isOpen} />
+            <div className="entete">
+                <Entete alt={alt} bandeau={bandeau} setIsOpen={setIsOpen} isOpen={isOpen} />
+            </div>
             {isOpen ? <div className="rolling">{theme}</div> : <div className="hidden">{theme}</div>}
         </>
     )

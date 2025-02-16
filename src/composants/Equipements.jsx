@@ -8,7 +8,9 @@ export default function Equipement({bandeau, log_equi}) {
 
     return (
         <div className="descriptiondetail">
-          <Collapse entete="entete" alt="Equipements" bandeau={bandeau} setIsOpen={setIsOpen} isOpen={isOpen} />
+          <div className="entete">
+            <Collapse alt="Equipements" bandeau={bandeau} setIsOpen={setIsOpen} isOpen={isOpen} />
+          </div>
           {isOpen ?
             <ul  className="rolling">
               {log_equi.map ( equipement =>
