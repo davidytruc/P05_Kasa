@@ -1,5 +1,5 @@
 import { useState } from "react"
-import Entete from "./Collapse.jsx"
+import Collapse from "./Collapse.jsx"
 
 
 // eslint-disable-next-line react/prop-types
@@ -9,9 +9,9 @@ export default function AproposDetails ({ alt, bandeau, theme }) {
     return (
         <>
             <div className="entete">
-                <Entete alt={alt} bandeau={bandeau} setIsOpen={setIsOpen} isOpen={isOpen} />
+                <Collapse alt={alt} bandeau={bandeau} setIsOpen={setIsOpen} isOpen={isOpen} />
             </div>
-            {isOpen ? <div className="rolling">{theme}</div> : <div className="hidden">{theme}</div>}
+            {isOpen ? <div className="collapse">{theme}</div> : <div className="collapse__hidden">{theme}</div>}
         </>
     )
 }

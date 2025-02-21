@@ -12,14 +12,14 @@ export default function Equipement({bandeau, log_equi}) {
             <Collapse alt="Equipements" bandeau={bandeau} setIsOpen={setIsOpen} isOpen={isOpen} />
           </div>
           {isOpen ?
-            <ul  className="rolling">
+            <ul  className="collapse">
               {log_equi.map ( equipement =>
                 <li key={equipement}>{equipement}</li>
               )
               }
             </ul>
             :
-            <ul  className="hidden">
+            <ul  className="collapse__hidden">
               {log_equi.map ( equipement =>
                 <li key={equipement}>{equipement}</li>
               )
