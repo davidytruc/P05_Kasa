@@ -7,15 +7,37 @@ $main-font: 'Montserrat', sans-serif;
     margin: 0
 }
 
+html, body {
+    margin: 0;
+	
+}
+
+// J'applique display flex aux éléments puis column pour spécifier leur comportement
+// 100vh pour utiliser toute la hauteur définie par le navigateur
+#root {
+    margin: 0;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+ }
+
 ul {
     list-style-type: none;
 }
 
-.conteneur {
+//Ajout d'une classe pour la partie navigation
+.navigation {
     width: 100%;
     max-width: 1280px;
     margin: auto;
+}
 
+.conteneur {
+    flex: 1; //ajout propriété flex 1 pour que ce conteneur prenne toute la hauteur disponible
+    width: 100%;
+    max-width: 1280px;
+    margin: auto;
+    padding: 0;
     @media (max-width: 1280px) {
         width: 94%;        
     }
@@ -400,6 +422,7 @@ ul {
 }
 
 .page404 {
+    flex: 1; //ajout propriété flex 1 pour que ce conteneur prenne toute la hauteur disponible
     font-family: $main-font;
     margin-bottom: 35px;
     @media (max-width: 768px) {

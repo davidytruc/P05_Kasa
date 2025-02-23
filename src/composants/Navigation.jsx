@@ -6,7 +6,7 @@ export default function Navigation() {
   const location = useLocation()
   const isActive = (path) => location.pathname === path
     return (
-      <div className='conteneur'>
+      <div className='navigation'>
         <div className='navbar'>
           <img alt="Logo Kasa" src={logo_desktop}/>
           <nav>
