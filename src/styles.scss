@@ -168,6 +168,7 @@ ul {
 /*Mon composant Detail*/
 
 .detail {
+    flex: 1; //ajout propriété flex 1 pour que ce conteneur prenne toute la hauteur disponible
     width: 100%;
     max-width: 1280px;
     margin: auto;
